@@ -1,0 +1,24 @@
+.cards{
+    width: 300px;
+    height: 200px;
+    box-shadow: 2px 2px 10px gray,
+                -2px -2px 10px gray;
+                padding: 0.5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+}
+.home-container{
+    padding: 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sub-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}

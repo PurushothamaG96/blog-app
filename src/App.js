@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
 import './App.css';
-
+import {Routes, Route} from "react-router-dom"
+import Nav from './components/Nav';
+import Home from './components/Home';
+import Footer from './components/Footer';
 function App() {
+  const [datas, setDatas] = useState([])
+  useEffect(()=>{
+    fetchData()
+  }, [])
+  const fetchData = () =>{
+    fetch("https://dummyjson.com/users")
+    .then((res)=>res.json())
+    .then((arr)=>{
+      setDatas(arr.users)
+    })
+    .catch((e)=>console.log(e))
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Nav/>
+    <Routes>
+      <Route path='/' element={<Home datas={datas}/>}/>
+    </Routes>
+    <Footer/>
+    </>
   );
 }
 

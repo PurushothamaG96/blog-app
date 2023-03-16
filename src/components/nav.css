@@ -1,0 +1,32 @@
+nav{
+    height: 4rem;
+}
+.nav-container{
+    width: 100vw;
+    background-color: black;
+}
+ul{
+    list-style: none;
+}
+.Link, p{
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500; 
+}
+p{
+    color: aliceblue;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.inner-nav-container{
+    width: 90vw;
+    margin: auto;
+}
+
+.active{
+    color: white;
+}
+.de-active{
+    color: gray;
+}
