@@ -4,6 +4,7 @@ import {Routes, Route} from "react-router-dom"
 import Nav from './components/Nav';
 import Home from './components/Home';
 import Footer from './components/Footer';
+import UserImfo from './components/UserImfo';
 function App() {
   const [datas, setDatas] = useState([])
   useEffect(()=>{
@@ -21,7 +22,8 @@ function App() {
     <>
     <Nav/>
     <Routes>
-      <Route path='/' element={<Home datas={datas}/>}/>
+      <Route path='/' element={<Home data={datas}/>}/>
+      <Route path="/userinfo" element={<UserImfo/>}/>
     </Routes>
     <Footer/>
     </>

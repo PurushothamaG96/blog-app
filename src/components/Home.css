@@ -6,7 +6,9 @@
                 padding: 0.5rem;
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 justify-content: space-around;
+    margin: 0.5rem;
 }
 .home-container{
     padding: 1rem;
@@ -21,4 +23,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+.cards img{
+    width: 100px;
 }
